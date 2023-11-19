@@ -1,0 +1,675 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+li {
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* Header - Menu */
+.header .menu {
+  width: 100%;
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+
+.menu .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.menu li img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Carrossel */
+.carrossel {
+  overflow: hidden;
+  margin-top: 50px;
+
+}
+.carrossel-img {
+  height: 250px;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carrossel-img .img1,
+.img2,
+.img3 {
+  z-index: -1;
+  min-width: 100%;
+}
+
+/* container */
+
+.container {
+  margin: 50px 0;
+  background-color: rgba(245, 218, 218, 0.199);
+}
+
+/* Categoria */
+.container-categoria {
+  display: grid;
+  justify-content: center;
+
+}
+.container-categoria h3 {
+  height: min-content;
+}
+.categoria {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.categoria div {
+  margin-right: 10px;
+}
+
+.categoria div:hover {
+  cursor: pointer;
+}
+
+.categoria div > img {
+  width: 100px;
+}
+
+/* servicos */
+.container-servicos {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-servicos .servicos {
+  display: flex;
+  margin-top: 20px;
+}
+.container-servicos .servico-item {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  background-color: #f2db08;
+  border-radius: 15px;
+}
+.container-servicos .servico-item:not(:last-child) {
+  margin-right: 120px;
+}
+.container-servicos .servico-item h5 {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.container-servicos .servico-item span {
+  color: red;
+}
+.container-servicos .servicos img {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  height: 70%;
+}
+
+.container-servicos .servicos .vet {
+  background-color: #a5f566;
+}
+.container-servicos .servicos .vet h5 {
+  text-align: center;
+  margin-left: 0;
+}
+.container-servicos .servicos .vet img {
+  right: 5px;
+  bottom: -10px;
+}
+
+.container-servicos .servicos .walk {
+  background-color: #6edcff;
+}
+.container-servicos .servicos .walk h5 {
+  width: 50px;
+  text-align: center;
+  margin-left: 50px;
+}
+.container-servicos .walk span {
+  color: #fff;
+}
+.container-servicos .servicos .walk img {
+  right: 10px;
+  bottom: -10px;
+}
+
+.container-servicos .servicos .creche {
+  background-color: #fdcc84;
+}
+.container-servicos .servicos .creche h5 {
+  width: 50px;
+  text-align: center;
+  margin-left: 40px;
+}
+.container-servicos .servicos .creche img {
+  right: 10px;
+  bottom: -50px;
+  width: 80%;
+  height: 90%;
+}
+
+/* produtos */
+
+.container-produtos {
+  display: grid;
+  justify-content: start;
+  margin: 20px auto;
+  width: 1000px;
+  overflow-x: hidden;
+}
+
+.container-produtos h5 {
+  font-size: 25px;
+}
+
+.container-produtos .produtos {
+  display: flex;
+  margin-top: 20px;
+  
+}
+ .produtos-item {
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.produtos-item .descricao{
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #6eddffc9;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px;
+  opacity: 0;
+}
+ .produtos-item:hover .descricao{
+  opacity: 1;
+  transition: 0.2s ease-in;
+} 
+ .produtos-item:hover {
+  cursor: pointer;
+}
+ .produtos-item img {
+  width: 100%;
+  height: 90%;
+}
+ .produtos-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Formulário do Usuário */
+
+.formulario {
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario form {
+  border: 1px solid black;
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 10px;
+  padding: 30px 100px;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.formulario form .img {
+  display: flex;
+  align-items: center;
+}
+.formulario form img {
+  width: 15%;
+}
+
+.formulario form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formulario form div > input {
+  border-radius: 8px;
+  padding: 5px;
+  outline: transparent;
+  border-color: rgba(128, 128, 128, 0.308);
+}
+.formulario form button {
+  border-radius: 8px;
+  outline: none;
+  margin-top: 20px;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.formulario form button:hover {
+  cursor: pointer;
+}
+
+/* Carrinho de Compras */
+
+.carrinho-compras {
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrinho-compras section {
+  border: 1px solid black;
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 10px;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 50px;
+}
+
+.carrinho-compras section div {
+  display: flex;
+  justify-content: center;
+}
+.carrinho-compras section img {
+  width: 20%;
+}
+
+.carrinho-compras section .item-add {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.carrinho-compras section button {
+  border-radius: 8px;
+  outline: none;
+  margin-top: 20px;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* Produto */
+
+.container-produto {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.container-produto .imagem-descricao,
+.titulo-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+}
+.container-produto .imagem {
+  width: 50%;
+  height: 60%;
+}
+.container-produto .imagem-descricao img {
+  width: 100%;
+  height: 100%;
+}
+.container-produto .imagem-descricao div h4 {
+  margin-bottom: 4px;
+}
+.container-produto .imagem-descricao div li {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.container-produto .titulo-compra {
+  padding-right: 50px;
+  align-items: start;
+}
+.container-produto .titulo-compra .titulo div img {
+  width: 10px;
+}
+
+.container-produto .titulo-compra .compra {
+  box-shadow: 0px 0px 3px black;
+  width: 100%;
+  padding: 10px 50px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.container-produto .titulo-compra .compra-item-primeiro {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.432);
+}
+.container-produto .titulo-compra .compra-item-primeiro p {
+  margin-bottom: 20px;
+}
+.container-produto .titulo-compra .compra-item-primeiro div button {
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 4px 20px;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.226);
+  border-color: rgba(128, 128, 128, 0.192);
+  font-weight: bold;
+}
+.container-produto .titulo-compra .compra-item-primeiro div button:hover {
+  background-color: rgba(128, 128, 128, 0.747);
+}
+
+.container-produto .titulo-compra .compra-item-segundo {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.container-produto .titulo-compra .compra-item-segundo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-produto .titulo-compra .compra-item-segundo div > span {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.container-produto .titulo-compra .compra-item-segundo div p > span {
+  color: rgb(124, 204, 4);
+}
+
+.container-produto .titulo-compra .compra-item-segundo .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-produto .titulo-compra .compra-item-segundo .buttons button {
+  margin: 0 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.container-produto .titulo-compra .compra-CEP div {
+  margin-top: 5px;
+  display: flex;
+}
+
+.container-produto .titulo-compra .compra-CEP div > input {
+  width: 80%;
+  height: 30px;
+  padding-left: 5px;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  border-radius: 8px 0 0 8px;
+}
+
+.container-produto .titulo-compra .compra-CEP div > button {
+  width: 20%;
+  height: 30px;
+  margin-left: 5px;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  border-radius: 0px 8px 8px 0px;
+}
+.container-produto .titulo-compra .compra .botoes {
+  margin-top: 50px;
+}
+
+.container-produto .titulo-compra .compra .botoes > button {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  border-radius: 8px;
+}
+
+.container-produto .titulo-compra .compra button:hover {
+  background-color: rgba(229, 226, 226, 0.747);
+}
+
+.container-produtos-produto {
+  display: grid;
+  justify-content: start;
+  margin: 20px 50px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container-produtos-produto .produtos {
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+}
+
+.container-produtos-produto .produtos .produtos-item {
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+
+/* Serviço Pet */
+
+.container-servico {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.container-servico .imagem {
+  width: 50%;
+  height: 60%;
+}
+.container-servico .imagem-descricao {
+  width: 60%;
+}
+.container-servico .imagem-descricao .imagem {
+  margin-top: 5em;
+  width: 100%;
+  height: 50%;
+}
+.container-servico .descricao  {
+  margin-top: 30px;
+}
+.container-servico .descricao span {
+  margin-top: 30px;
+  font-size: 10px;
+}
+.container-servico .imagem-descricao img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.container-servico .imagem-descricao .descricao div img {
+  width: 10px;
+}
+
+.container-servico .imagem-descricao div li {
+  list-style-type: circle;
+  margin: 10px 0 10px 20px;
+}
+.container-servico .titulo-compra .titulo div img {
+  width: 10px;
+}
+.container-servico .titulo-compra {
+  align-items: start;
+  width: 60%;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+.container-servico .titulo-compra .titulo div img {
+  width: 10px;
+}
+
+.container-servico .titulo-compra .compra {
+  box-shadow: 0px 0px 3px black;
+  width: 100%;
+  padding: 10px 50px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.container-servico .titulo-compra .compra-item-primeiro {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.432);
+}
+.container-servico .titulo-compra .compra-item-primeiro .item {
+  display: flex;
+}
+.container-servico .titulo-compra .compra-item-primeiro .item > div {
+  margin-right: 50px;
+}
+.container-servico .titulo-compra .compra-item-primeiro .item > div>:hover {
+  cursor: pointer;
+}
+.container-servico .titulo-compra .compra-item-primeiro p {
+  margin-bottom: 20px;
+}
+.container-servico .titulo-compra .compra-item-primeiro div button {
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 4px 15px;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.226);
+  border-color: rgba(128, 128, 128, 0.192);
+  font-weight: bold;
+}
+.container-servico .titulo-compra .compra-item-primeiro div button:hover {
+  background-color: rgba(128, 128, 128, 0.747);
+}
+
+.container-servico .titulo-compra .compra-item-segundo {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.container-servico .titulo-compra .compra-item-segundo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-servico .titulo-compra .compra-item-segundo div > span {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.container-servico .titulo-compra .compra-item-segundo div p > span {
+  color: rgb(124, 204, 4);
+}
+.container-servico .titulo-compra .agendar  {
+  margin-bottom: 20px;
+  
+}
+.container-servico .titulo-compra .agendar input {
+    width: 30%;
+    height: 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border-color: rgba(128, 128, 128, 0.164);
+    outline: none;
+    padding: 5px;
+}
+.container-servico .titulo-compra .agendar .agendar-buscar {
+  margin-top: 10px;
+}
+.container-servico .titulo-compra .agendar .agendar-buscar div {
+  display: flex;
+  align-items: center;
+}
+.container-servico .titulo-compra .agendar .agendar-buscar input  {
+  width: inherit;
+  justify-content: center;
+  margin-top: 0;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.container-servico .titulo-compra .compra-CEP div {
+  margin-top: 5px;
+  display: flex;
+}
+
+.container-servico .titulo-compra .compra-CEP div > input {
+  width: 80%;
+  height: 30px;
+  padding-left: 5px;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  border-radius: 8px 0 0 8px;
+}
+
+.container-servico .titulo-compra .compra-CEP div > button {
+  width: 20%;
+  height: 30px;
+  margin-left: 5px;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  border-radius: 0px 8px 8px 0px;
+}
+
+.container-servico .titulo-compra .compra > button {
+  width: 100%;
+  height: 30px;
+  margin-top: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  border-radius: 8px;
+}
+
+.container-servico .titulo-compra .compra button:hover {
+  background-color: rgba(229, 226, 226, 0.747);
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+}
